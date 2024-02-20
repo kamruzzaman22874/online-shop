@@ -39,11 +39,11 @@ const Products = () => {
     console.log({ cart })
 
     return (
-        <div className="my-5">
+        <div className="my-5 mt-20">
             <div className="flex justify-end px-10">
                 <input type="text" value={inputValue} onChange={newValue} placeholder="search with name or price " className="input input-bordered w-full max-w-xs" />
             </div>
-            <div className="grid grid-cols-3 gap-6 px-10 my-10">
+            <div className="grid md:grid-cols-3 gap-6 px-10 my-10">
                 {
                     filterProdcuts?.map(product => <Product key={product.id} product={product} addToCart={addToCart}></Product>)
                 }

@@ -13,13 +13,14 @@ const Product = ({ product, addToCart }) => {
                 <h2 className="card-title">
                     {brand}
                 </h2>
-                <div className="badge badge-secondary">Price : ${price}</div>
-                <p>{description}</p>
+                <div className="badge bg-[#bebcbc] text-black font-bold">Price : ${price}</div>
+
                 <div className="card-actions">
-                    <div className="badge badge-outline bg-secondary text-white">Available Stock: {stock}</div>
-                    <div className="badge badge-outline bg-secondary text-white">Discount: {discountPercentage}%</div>
+                    <div className="badge badge-outline bg-[#bebcbc] text-black font-bold">Available Stock: {stock}</div>
+                    <div className="badge badge-outline bg-[#bebcbc] text-black font-bold">Discount: {discountPercentage}%</div>
                 </div>
-                <button onClick={() => handleAddToCart(product)} className="bg-[#FF00D3] text-white rounded py-2 ">Add To Cart</button>
+                <p>{description}</p>
+                <button onClick={() => handleAddToCart(product)} className="btn btn-primary">Add To Cart</button>
             </div>
         </div>
     );
